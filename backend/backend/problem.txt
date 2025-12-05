@@ -1,0 +1,24 @@
+imporve working import csv file
+
+
+
+--------------------------------------------
+8 — Testing Permissions & Roles (Admin / Manager / Employee)
+
+Create Manager group & assign user
+
+In admin: create a Manager group and add permissions; add user to that group.
+
+Link a User to an Employee instance via employee.user = user.
+
+Test flows
+
+Log in as Admin (superuser) — should access everything.
+
+Log in as Manager — should be able to manage employees in their department (based on permission logic).
+
+Log in as Employee (non-admin) — should only view/edit own record.
+
+Logic: permissions are enforced in permissions.py (object-level checks). If you get 403 Forbidden, verify group membership or Employee.user mapping.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
